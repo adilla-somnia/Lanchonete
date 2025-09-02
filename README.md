@@ -1,36 +1,40 @@
-# Sistema de Lanchonete em Python
+# Snack Bar System in Python
 
-Este é um projeto simples de terminal que simula o funcionamento de uma lanchonete. Ele utiliza estruturas de dados fundamentais como **fila**, **pilha**, **dicionário** e **listas** para gerenciar pedidos, contas e histórico de vendas.
+This is a simple terminal-based project that simulates the operation of a snack bar. It uses fundamental data structures such as queue, stack, dictionary, and lists to manage orders, bills, and sales history.
 
-## Estrutura do Projeto
+⚠️ Note: The source code is written in Portuguese, including variable names, function names, and user interface messages.
 
-- `app.py` → Interface principal do usuário (menu);
-- `cardapio.py` → Define o cardápio com itens, preços, tempos de preparo e categorias;
-- `cozinha.py` → Processamento automático da fila de pedidos com `threading`;
-- `caixa.py` → Controle de contas por mesa, histórico de notas fiscais, fechamento de conta;
-- `stack.py` → Implementação da estrutura de pilha (`Stack`).
+## Project Structure
+- `app.py` →  Main user interface (menu)
+- `cardapio.py` → Defines the menu with items, prices, preparation times, and categories
+- `cozinha.py` → Automatically processes the order queue using `threading`
+- `caixa.py` → Manages table bills, invoice history, and bill closing
+- `stack.py` → Stack structure implementation (`Stack`).
 
-## Funcionalidades
+## Features
 
-- Visualização de cardápio por categoria (Lanches, Bebidas, Sobremesas);
-- Criação de pedidos para uma mesa;
-- Processamento automático de pedidos na **fila de preparo**;
-- Preparo simulado por tempo e executado em **background**;
-- Entrega do pedido e envio automático para a conta da mesa;
-- Ver a conta da mesa com nomes dos itens e total a pagar;
-- Fechar a conta (gera uma nota fiscal que é empilhada no histórico);
-- Visualização do histórico de vendas (últimas notas primeiro - pilha);
-- Desfazer a última venda (retira a última nota do histórico e devolve à conta).
+- View menu by category (Snacks, Drinks, Desserts)
+- Create orders for a specific table
+- Automatically process orders in a preparation queue
+- Simulated preparation time, handled in the background
+- Deliver order and automatically charge the table’s bill
+- View a table’s bill with item names and total amount
+- Close the bill (generates a receipt added to the stack history)
+- View sales history (latest receipts on top – stack behavior)
+- Undo the last sale (removes the last receipt from history and restores the bill)
 
-## Estruturas de Dados Usadas
+## Data Structures Used
 
-- **Dicionário**: para representar o cardápio e as contas por mesa;
-- **Fila**: para pedidos em ordem de chegada (na cozinha);
-- **Pilha**: para notas fiscais (último pagamento no topo);
-- **Listas**: para armazenar itens de pedidos.
+- **Dictionary**: to represent the menu and table bills
+- **Queue**: for processing orders in order of arrival (kitchen)
+- **Stack**: for storing receipts (most recent payment on top)
+- **Lists**: for storing items within an order
 
-## ▶ Como Executar
+## ▶ How to Run
 
-1. Tenha o Python instalado (3.7+)
-2. Salve todos os arquivos na mesma pasta
-3. No terminal, execute: python app.py
+1. Make sure Python is installed (version 3.7 or higher)
+2. Save all files in the same folder
+3. In the terminal, run:
+`python app.py`
+
+You're good to go!
